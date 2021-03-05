@@ -1,0 +1,38 @@
+<!--include header-->
+   <%-include('include/_header')%>
+<!--/include header-->
+
+<!--Main Site-->
+<main id= "site-main">
+   <div class="container">
+      <div class="box-nav d-flex justify-between">
+          <a href="/add-user" class="border-shadow">
+             <span class="text-gradient">Nova bebida <i class="fas fa-wine-bottle"></i></i></span>
+       </a>
+      </div>
+
+      <!-- FORM HANDLING-->
+      <form action="/" method="POST">
+       <table class="table">
+           <thead class="thead-dark">
+               <tr>
+                   <th>ID</th>
+                   <th>Tipo</th>
+                   <th>Marca</th>
+                   <th>Preço</th>
+                   <th>Ação</th>
+               </tr>
+           </thead>
+           <tbody>
+            <%-include('include/_show')%>
+           </tbody>
+
+       </table>
+   </form>
+   </div>
+</main>
+<!--Main Site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->

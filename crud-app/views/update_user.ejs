@@ -1,0 +1,47 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<!--Main Site-->
+<main id= "site-main">
+    <div class="container">
+       <div class="box-nav d-flex justify-between">
+         <div class="filter">
+             <a href="/"><i class="fas fa-angle-double-left"></i> Todas as Bebidas</a>
+         </div>
+       </div>
+       <div class="form-title text-center">
+        <h2 class="text-dark">Editar Bebida</h2>
+        <span class="text-light">Use o formulário abaixo para editar uma bebida</span>
+    </div>
+        <!--add user form-->
+        <!-- FROM HANDLING-->
+<form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="tipo" class="text-light">Tipo</label>
+            <input type = "hidden" name="id" value="<%= user._id%>">
+             <input type="text" name="tipo" value="<%= user.tipo%>">
+        </div>
+        <div class="form-group">
+         <label for="marca" class="text-light">Marca</label>
+          <input type="text" name="marca" value="<%= user.marca%>">
+     </div>
+     <div class="form-group">
+         <label for="preço" class="text-light">Preço</label>
+          <input type="text" name="preço" value="<%= user.preço%>">
+     </div>
+    </div>
+    <div class="form-group">
+     <button type="submit" class="btn text-dark update">Salvar</button>
+ </div>
+
+</form>
+       
+    </div>
+</main>
+<!--Main Site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
